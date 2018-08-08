@@ -1,1 +1,11 @@
-<h2>Welcome to Sport Touraments</h2>
+<h1>Welcome to Sport Touraments</h1>
+<div id="games"></div>
+
+<script> 
+    $(function(){
+		readTextFile("games.json", function(text){
+		    var games_json = JSON.parse(text);
+		    games_on_element('games', games_json);
+		});
+    });
+</script> 

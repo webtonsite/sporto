@@ -1,0 +1,14 @@
+[
+	{
+		"id":"1",
+		"name": "3x3",
+		"description": "Play 3x3. Halfcourt",
+		"image": "https://d1u4oo4rb13yy8.cloudfront.net/article/68317-uvhuhvlcoh-1505291993.jpg"	
+	},
+	{
+		"id":"2",
+		"name": "5x5",
+		"description": "Play 5x5. Fullcourt",
+		"image": "https://i.ytimg.com/vi/irOIjO9hLgY/maxresdefault.jpg"
+	}
+]

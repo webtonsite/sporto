@@ -45,12 +45,7 @@
     <div class="wrapper">
 	    <div class="container">
 
-	      <div class="starter-template">
-	        <h1>Sporto</h1>
-	        <p class="lead"></p>
-
 	        <div id="includedContent"></div>
-	      </div>
 
 	    </div><!-- /.container -->
 	</div><!-- /.wrapper -->
@@ -60,27 +55,10 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
+    <script src="scripts.js"></script>
     <script> 
 	    $(function(){
 	    	$("#includedContent").load("home.html");
-
-	    	$(document).on('click', '#menu-home', function(e){
-	    		e.preventDefault();
-	    		console.log('menu-home');
-	    		$("#includedContent").load("home.html");
-	    	});
-	    	$(document).on('click', '#menu-about', function(e){
-	    		e.preventDefault();
-	    		console.log('menu-about');
-	    		$("#includedContent").load("about.html");
-	    	});
-	    	$(document).on('click', '#menu-contact', function(e){
-	    		e.preventDefault();
-	    		console.log('menu-contact');
-	    		$("#includedContent").load("contact.html");
-	    	});	    		    	
-	       
 	    });
     </script> 
 
