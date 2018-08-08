@@ -1,20 +1,29 @@
 $(function(){
 	$(document).on('click', '#menu-home', function(e){
 		e.preventDefault();
-		console.log('menu-home');
-		$("#includedContent").load("home.html");
+		menu_active(this);
+		//console.log('menu-home');
+		$("#includedContent").load("pages/home.html");
 	});
 	$(document).on('click', '#menu-about', function(e){
 		e.preventDefault();
-		console.log('menu-about');
-		$("#includedContent").load("about.html");
+		menu_active(this);
+		//console.log('menu-about');
+		$("#includedContent").load("pages/about.html");
 	});
 	$(document).on('click', '#menu-contact', function(e){
 		e.preventDefault();
-		console.log('menu-contact');
-		$("#includedContent").load("contact.html");
-	});	    		    	
+		menu_active(this);
+		//console.log('menu-contact');
+		$("#includedContent").load("pages/contact.html");
+	});	  
+
+	function menu_active(menu_el){
+		var li_el = $(menu_el).parent().find('li').removeClass('active');
+		$(menu_el).addClass('active');
+	}	  		    	
 });
+
 
 
 function readTextFile(file, callback) {
