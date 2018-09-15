@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="/favicon.ico">
 
-    <title>Sporto</title>
+    <title>Puiki Proga</title>
 
     <!-- Bootstrap core CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
@@ -30,7 +30,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="http://sporto.lt">Sporto</a>
+          <a class="navbar-brand" href="http://puikiproga.lt">Puiki Proga</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
@@ -57,10 +57,42 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="assets/scripts.js"></script>
     <script> 
+    	var home_menu_active = '';
 	    $(function(){
 	    	$("#includedContent").load("pages/home.html");
+
 	    });
     </script> 
+
+<!-- Firebase App is always required and must be first -->
+<script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCgTrkVu37t3fmMcooddl2aSKF95H_t-fA",
+    authDomain: "sporto-47172.firebaseapp.com",
+    databaseURL: "https://sporto-47172.firebaseio.com",
+    projectId: "sporto-47172",
+    storageBucket: "sporto-47172.appspot.com",
+    messagingSenderId: "893562807400"
+  };
+  firebase.initializeApp(config);
+
+  var database = firebase.database();
+  var ref = database.ref("games");
+  //console.log(ref);
+
+  ref.on('value', gotData, errData);
+
+  function gotData(data){
+  	console.log(data.val());
+  }
+  function errData(err){
+  	console.log(err);	
+  }
+  
+</script>    
 
   </body>
 </html>

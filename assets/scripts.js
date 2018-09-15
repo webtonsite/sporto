@@ -21,7 +21,15 @@ $(function(){
 	function menu_active(menu_el){
 		var li_el = $(menu_el).parent().find('li').removeClass('active');
 		$(menu_el).addClass('active');
-	}	  		    	
+	}	
+
+	$(document).on('submit', '#contact-form', function(e){
+		e.preventDefault();
+		var name = $(this).parent().find('input[name]').val();
+		var form_inputs = $(this).serializeArray();
+		console.log(name);
+		console.log( form_inputs );
+	});  		    	
 });
 
 
